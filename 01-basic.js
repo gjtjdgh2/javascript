@@ -45,3 +45,4 @@ let v="this is String";
 console.log(v,"->",typeof v);
 v=2021;
 console.log(v,"->",typeof v);
+
