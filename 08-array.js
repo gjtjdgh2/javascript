@@ -63,3 +63,62 @@ console.log("shift:",fruits.shift());
 console.log("shift:",fruits.shift());
 console.log("shift:",fruits.shift());
 console.log("Queue:",fruits);
+
+//splice:요소의 삭제와 추가
+fruits =[`Banana`,`Orange`,`Apple`,`Mango`];
+console.log("원본:",fruits);
+//인수가 1개 일때 해당 인덱스 부터 끝까지 추출후 삭제
+console.log("splice(2)",fruits.splice(2));
+console.log("원본:",fruits);
+
+fruits =[`Banana`,`Orange`,`Apple`,`Mango`];
+console.log("원본:",fruits);
+//인수가 2개  시작 인덱스 ,갯수  추출 후 삭제
+console.log("splice(2,1)",fruits.splice(2,1));
+console.log("원본:",fruits);
+console.log("-----");
+fruits =[`Banana`,`Orange`,`Apple`,`Mango`];
+console.log("원본:",fruits);
+//인수가 3개 이상  시작 인덱스  갯수 추가할것
+console.log("splice(2,1items..)",fruits.splice(2,1,"Kiwi","Melon"));
+console.log("원본:",fruits);
+console.log("-----");
+
+//reverse,slice
+console.log("원본:",fruits);
+fruits.reverse(); //순버 반대로
+console.log("원본:",fruits);
+let slices =fruits.slice(1,2); //slice 는 삭제 하지 않는다
+console.log("slice:",slices);
+console.log("원본:",fruits);
+console.log("-----");
+
+//sort
+fruits =[`Banana`,`Orange`,`Apple`,`Mango`];
+console.log("원본:",fruits);
+console.log(fruits.sort());//기본적으로 오름 차순 정렬
+
+
+//내림차순 혹은 사용자 정의 기준으로 정렬 -> 정렬 기준 함수를 전달
+fruits.sort(function(v1,v2){
+    /*return 값
+    0:두값은 같은 순번
+    음수: v1이 앞이다
+    양수:v2가 앞이다
+    */
+   //내림차순 정렬
+   if(v1 ==v2)return 0;
+    if(v1 <v2) return 1;
+    if(v1>v2)return-1;
+
+});
+console.log("내림차순 정렬:",fruits);
+
+//split (String의 매서드): 문자열을 특정 구분자를 기준으로 분리,배열로 변환
+const str = "JavaScript is something strange than other languages";
+let chunks =str.split(" ");
+
+console.log("SPLIT:",chunks);
+for(let i=0;i<chunks.length;i++){
+    console.log("chunks:",chunks[i]);
+}
