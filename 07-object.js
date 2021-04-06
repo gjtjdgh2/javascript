@@ -32,6 +32,7 @@ person2.showInfo();
 
 //객체 생성 방법 3: 함수를 생성자 처럼 활용
 console.log("============================  Prototype");
+
 const Member=function(name,position){
     this.name=name;
     this.position=position;
